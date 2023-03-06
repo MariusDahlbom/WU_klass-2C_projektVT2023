@@ -1,0 +1,171 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+
+}
+
+#link-list a{
+    text-decoration: none;
+    color: coral;
+    letter-spacing: 0.1875rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-transform: uppercase;
+
+}
+
+#burger div{
+    width: 29px;
+    height: 4px;
+    background-color: indianred;
+    margin: 5px;
+    border-radius: 20%;
+    transition: all 0.5s;
+
+}
+
+nav{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100px;
+    background-color: khaki;
+    grid-area: na;
+    border-right: 5px solid white;
+    border-right: 5px solid white;
+    
+
+}
+
+#link-list{
+    background-color: khaki;
+    height: 90%;
+    width: 50%;
+    position: absolute;
+    top: 100px;
+    right: -50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    transition: all 1s;
+ 
+}
+
+#burger{
+    margin-right: 50px;
+    cursor: pointer;
+}
+
+.link-list-visible{
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+
+.burger-in-x-form #burger_line_2{
+    opacity: 0;
+}
+
+.burger-in-x-form #burger_line_1{
+    transform: rotate(-45deg) translate(-6.5px, 6px);
+}
+
+.burger-in-x-form #burger_line_3{
+    transform: rotate(45deg) translate(-6.5px, -6px);
+}
+
+
+#grid_wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100px 800px 400px 400px 300px 100px;
+    grid-template-areas: 
+    "he na"
+    "s5 s5"
+    "s1 s2"
+    "s3 s2"
+    "s3 s4"
+    "fo fo";
+}
+
+header{
+    grid-area: he;
+    background-color: brown;
+   border-right: 5px solid white;
+   border-right: 5px solid white;
+}
+#section_1{
+    grid-area: s1;
+    background-color:cadetblue;
+    border: 5px solid white;
+}
+#section_2{
+    grid-area: s2;
+    background-color: darkslategray;
+    border: 5px solid white;
+}
+#section_3{
+    grid-area: s3;
+    background-color: rgb(60, 74, 60);
+    border: 5px solid white;
+}
+#section_4{
+    grid-area: s4;
+    background-color: tan;
+    border: 5px solid white;
+}
+#section_5{
+    grid-area: s5;
+    background-image:url(/img/s5.jpg);
+    background-size: 100%;
+    background-position: 0px -100px;
+    border: 5px solid white;
+    
+
+}
+
+
+
+footer{
+    grid-area: fo;
+    background-color: lightgreen;
+}
+
+@media screen and (min-width: 2000px){
+
+    #burger{
+        display: none;
+    }
+
+    #grid_wrapper{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 100px 100px 400px 400px 100px;
+        grid-template-areas: 
+        "na na"
+        "he he"
+        "s1 s2"
+        "s3 s4"
+        "fo fo";
+    }
+
+    #link-list{
+        height: 100px;
+        width: 100%;
+        top: 0px;
+        flex-direction: row;
+
+
+        transition: all 1s;
+
+    }
+
+    .link-list-visible{
+        transform: translateX(0px);
+        transition: all 1s;
+    }
+
+
+    
+}
