@@ -5,6 +5,7 @@
     overflow-x: hidden;
     font-style:  none;
     text-decoration: none;
+    
 
 }
 
@@ -16,11 +17,15 @@
     text-transform: uppercase;
 
 }
+#Rivalo_logga{
+    height: 50px;
+    width: auto;
+}
 
 #burger div{
     width: 29px;
     height: 4px;
-    background-color: indianred;
+    background-color: coral;
     margin: 5px;
     border-radius: 20%;
     transition: all 0.5s;
@@ -32,19 +37,19 @@ nav{
     justify-content: flex-end;
     align-items: center;
     height: 100px;
-    background-color: khaki;
+    background-color: rgb(48, 46, 46);
     grid-area: na;
-    border-right: 5px solid white;
-    border-right: 5px solid white;
+    border-bottom: 3px solid white;
+   
 }
 
 #link-list{
-    background-color: khaki;
+    background-color: rgb(48, 46, 46);
     height: 90%;
-    width: 50%;
+    width: 25%;
     position: absolute;
     top: 100px;
-    right: -50%;
+    right: -25%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -52,6 +57,7 @@ nav{
     list-style: none;
     transition: all 1s;
     z-index: 2;
+    border: 7px solid white;
  
 }
 
@@ -93,17 +99,18 @@ nav{
 
 header{
     grid-area: he;
-    
-    background-color: brown;
-    border-right: 5px solid white;
-    border-right: 5px solid white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgb(48, 46, 46);
+    border-bottom: 3px solid white;
 }
 #section_1{
     grid-area: s1;
     background-image: url(/img/resturang_bild_1.jpg);
     filter: grayscale(60%);
-    background-size: 100%;
-    
+    background-size: cover;
+    background-position: center;
     border: 5px solid white;
 }
 #section_2{
@@ -113,8 +120,8 @@ header{
     justify-content: center;
     background-image: url(/img/pasta_bild_1.jpg);
     filter: grayscale(40%);
-    background-size: 100%;
-    background-position: 0px -300px;
+    background-size: cover;
+    background-position: center;
     border: 5px solid white;
 }
 #section_3{
@@ -124,8 +131,8 @@ header{
     justify-content: center;
     background-image: url(/img/resturang_bild_2.jpg);
     filter: grayscale(40%);
-    background-size: 100%;
-    background-position: 0 -250px;
+    background-size: cover;
+    background-position: center;
     border: 5px solid white;
 }
 #section_4{
@@ -134,8 +141,8 @@ header{
     align-items: center;
     justify-content: center;
     background-image: url(/img/pizza_bild_1.jpg);
-    background-size: 100%;
-    filter: grayscale(50%);
+    background-size: cover;
+    filter: grayscale(60%);
     border: 5px solid white;
 }
 #section_5{
@@ -144,9 +151,9 @@ header{
     align-items: center;
     justify-content: center;
     background-image:url(/img/s5.jpg);
-    filter: grayscale(60%);
-    background-size: 100%;
-    background-position: 0px -100px;
+    filter: grayscale(55%);
+    background-size: cover;
+    background-position:center;
     border: 5px solid white;
     
 
@@ -156,6 +163,9 @@ header{
 
 footer{
     grid-area: fo;
+    display: flex;
+    justify-content: flex-start;
+    align-items:center;
     background-color: rgb(48, 46, 46);
 }
 
@@ -165,22 +175,28 @@ h2{
     font-size: 40px;
 }
 h3{
-
+    /* background-color: rgba(71, 70, 53, 0.8); */
     margin-top: 5%;
     color: white;
 }
 #article_1{
-    height: 375px;
+    padding: 20px;
     background-color: rgba(71, 70, 53, 0.6);
     font-size: 20px;
     text-align: center;
 }
 
 #article_2{
-    height: 525px;
+    padding: 20px;
     background-color: rgba(71, 70, 53, 0.6);
     font-size: 20px;
     text-align: center;
+}
+#article_3{
+    width: 800px;
+    background-color: rgba(71, 70, 53, 0.35);
+    border-radius: 1200px;
+    border: 4px solid white;
 }
 #article_4{
     border: 4px solid white;
@@ -192,43 +208,542 @@ h3{
     text-align: center;
     text-transform: uppercase;
 }
-#Rivalo_logga{
-    
+
+#grid_wrapper_2{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100px 800px 2000px 250px;
+    grid-template-areas: 
+    "he na"
+    "s6 s6"
+    "s7 s7"
+    "fo fo";
 }
 
-@media screen and (min-width: 2000px){
+#section_6{
+    grid-area: s6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(/img/Meny_bild_1.jpg);
+    background-size: cover;
+    background-position: center;
+    filter: grayscale(60%);
+    border: 5px solid white;
+}
 
-    #burger{
-        display: none;
+#section_7{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 400px 400px 400px 400px 400px;
+    grid-template-areas: 
+    "am1 am2"
+    "am3 am4"
+    "am5 am6"
+    "am7 am8"
+    "am9 am10";
+    grid-area: s7;
+    background-color: rgb(48, 46, 46);
+}
+
+#article_meny_1{
+    grid-area: am1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgba(71, 70, 53, 0.6);
+    margin: 20px;
+}
+#h3_article_meny{
+    margin: 20px;
+    font-size: larger;
+
+}
+#article_meny_2{
+    grid-area: am2;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgba(71, 70, 53, 0.6);
+    margin: 20px;
+}
+#article_meny_3{
+    grid-area: am3;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgba(71, 70, 53, 0.6);
+    margin: 20px;
+}
+#article_meny_4{
+    grid-area: am4;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgba(71, 70, 53, 0.6);
+    margin: 20px;
+}
+#article_meny_5{
+    grid-area: am5;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgba(71, 70, 53, 0.6);
+    margin: 20px;
+}
+#article_meny_6{
+    grid-area: am6;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgba(71, 70, 53, 0.6);
+    margin: 20px;
+}
+#article_meny_7{
+    grid-area: am7;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgba(71, 70, 53, 0.6);
+    margin: 20px;
+}
+#article_meny_8{
+    grid-area: am8;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgba(71, 70, 53, 0.6);
+    margin: 20px;
+}
+#article_meny_9{
+    grid-area: am9;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgba(71, 70, 53, 0.6);
+    margin: 20px;
+}
+#article_meny_10{
+    grid-area: am10;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgba(71, 70, 53, 0.6);
+    margin: 20px;
+}
+
+#grid_wrapper_3{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100px 820px 75px 600px 250px;
+    grid-template-areas: 
+    "he na"
+    "s8 s8"
+    "s9 s9"
+    "g4 g4"
+    "fo fo";
+}
+
+#section_8{
+    grid-area: s8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    background-size: cover;
+    filter: grayscale(50%);
+    border: 5px solid white;
+    background-image: url(/img/Om_oss_bild_3_stad.jpg);
+}
+
+#grid_wrapper_4{
+    grid-area: g4;
+    background-color: rgb(48, 46, 46);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 600px;
+    grid-template-areas: 
+    "ao1 ao2 ao3";
+  
+}
+
+#section_9{
+    grid-area: s9;
+    background-color: rgb(48, 46, 46);
+}
+
+#article_7{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(/img/Om_oss_bild_1.jpg);
+    background-position: center;
+    filter: grayscale(10%);
+    border: 3px solid white;
+    border-radius: 12px;
+    background-size: cover;
+    width: 400px;
+    height: 600px;
+    margin: 100px;
+}
+#article_8{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(/img/Om_oss_bild_2_gulbil.jpg);
+    background-position: center;
+    filter: grayscale(10%);
+    border: 3px solid white;
+    border-radius: 12px;
+    background-size: cover;
+    width: 400px;
+    height: 600px;
+    margin: 100px;
+ 
+}
+
+#article_9{
+    grid-area: ao1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(/img/Om_oss_bild_4_a9.jpg);
+    background-position: center;
+    background-size: cover;
+    filter: grayscale(60%);
+    border: 3px solid white;
+    margin: 5px;
+
+}
+
+#article_10{
+    grid-area: ao2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(/img/Om_oss_bild_5_a10.jpg);
+    background-position: center;
+    background-size: cover;
+    filter: grayscale(80%);
+    border: 3px solid white;
+    margin: 5px;
+}
+
+#article_11{
+    grid-area: ao3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(/img/Om_oss_bild_6_a11.jpg);
+    background-position: center;
+    background-size: cover;
+    filter: grayscale(50%);
+    border: 3px solid white;
+    margin: 5px;
+}
+
+#mini_article1{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(71, 70, 53, 0.6);
+    width: 100%;
+    height: 85%;
+    padding: 20px;
+    margin-top: 20px;
+
+}
+
+#mini_article2{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(71, 70, 53, 0.6);
+    width: 100%;
+    height: 85%;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+#mini_article3{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center; 
+    text-align: center;
+    background-color: rgba(71, 70, 53, 0.6);
+    width: 100%;
+    height: 85%;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+#mini_article4{
+    border: 4px solid white;
+    border-radius: 15px;
+    width: 100px;
+    text-decoration: none;
+    letter-spacing: 0.1875rem;
+    height: auto;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: rgba(71, 70, 53, 0.5);
+
+}
+#mini_article5{
+    border: 4px solid white;
+    border-radius: 15px;
+    width: 100px;
+    text-decoration: none;
+    letter-spacing: 0.1875rem;
+    height: auto;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: rgba(71, 70, 53, 0.5);
+}
+.a_om_oss{
+    text-decoration: none;
+    color: white;
+}
+
+.h3_med_ljusare_bakgrund{
+    background-color: rgba(71, 70, 53, 0.6);
+}
+
+li{
+    font-size: larger;
+}
+
+#grid_wrapper_5{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100px 600px 75px 650px 250px;
+    grid-template-areas: 
+    "he na"
+    "s10 s10"
+    "s11 s11"
+    "s12 s13"
+    "fo fo";
+}
+
+#section_10{
+    grid-area: s10;
+    background-color: blueviolet;
+}
+#section_11{
+    grid-area: s11;
+    background-color: rgb(48, 46, 46);
+}
+#section_12{
+    grid-area: s12;
+    background-color: cadetblue;
+}
+#section_13{
+    grid-area: s13;
+    background-color: burlywood;
+}
+
+@media screen and (max-width: 600px){
+    *{
+        overflow-x: hidden;
     }
 
+
     #grid_wrapper{
+        display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 100px 100px 400px 400px 100px;
+        grid-template-rows: 100px 50vh 80vh 45vh 100vh 250px 30vh;
         grid-template-areas: 
-        "na na"
-        "he he"
-        "s1 s2"
-        "s3 s4"
+        "he na"
+        "s5 s5"
+        "s2 s2"
+        "s1 s1"
+        "s3 s3"
+        "s4 s4"
         "fo fo";
     }
 
-    #link-list{
-        height: 100px;
+    #article_3{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 60%;
+        height: 75%;
+    }
+    
+    #article_1{
         width: 100%;
-        top: 0px;
-        flex-direction: row;
+        height: 82%;
+        font-size: smaller;
+        
+    }
 
+    #article_2{
+       width: 100%;
+       height: 90%;
+        font-size: smaller;
+    }
 
+    #article_5{
+        width: 40%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #Rivalo_logga{
+    width: 100%;
+    height: auto;
+    }
+
+    #Rivalo_logga_2{
+        width: 100%;
+        height: auto;
+    }
+    #Rivalo_logga_3{
+        width: 100%;
+        height: auto;
+    }
+
+    #link-list{
+        background-color: rgb(48, 46, 46);
+        height: 90%;
+        width: 100%;
+        position: absolute;
+        top: 100px;
+        right: -100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        list-style: none;
         transition: all 1s;
-
+        z-index: 2;
+        border: 7px solid white;
+     
     }
 
     .link-list-visible{
-        transform: translateX(0px);
+        transform: translateX(-100%);
         transition: all 1s;
     }
 
+    #grid_wrapper_2{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 100px 80vh 325vh 30vh;
+        grid-template-areas: 
+        "he na"
+        "s6 s6"
+        "s7 s7"
+        "fo fo";
+    }
 
+    #section_7{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 65vh 65vh 65vh 65vh 65vh;
+        grid-template-areas: 
+        "am1 am2"
+        "am3 am4"
+        "am5 am6"
+        "am7 am8"
+        "am9 am10";
+        grid-area: s7;
+        background-color: rgb(48, 46, 46);
+    }
     
+    #article_meny_1{
+        margin: 10px;
+    }
+    #h3_article_meny{
+        margin: 10px;
+        font-size: smaller;
+    
+    }
+    #h2_article_meny{
+        font-size: medium;
+    }
+    #article_meny_2{
+  
+        margin: 10px;
+    }
+    #article_meny_3{
+
+        margin: 10px;
+    }
+    #article_meny_4{
+   
+        margin: 10px;
+    }
+    #article_meny_5{
+  
+        margin: 10px;
+    }
+    #article_meny_6{
+
+        margin: 10px;
+    }
+    #article_meny_7{
+
+        margin: 10px;
+    }
+    #article_meny_8{
+
+        margin: 10px;
+    }
+    
+    #article_meny_9{
+      
+        margin: 10px;
+    }
+    #article_meny_10{
+        
+        margin: 10px;
+    }
+
+    #grid_wrapper_3{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 100px 80vh 15vh 300vh 250px;
+        grid-template-areas: 
+        "he na"
+        "s8 s8"
+        "s9 s9"
+        "g4 g4"
+        "fo fo";
+    }
+
+    #grid_wrapper_4{
+        grid-area: g4;
+        background-color: rgb(48, 46, 46);
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 100vh 100vh 100vh;
+        grid-template-areas: 
+        "ao1"
+        "ao2"
+        "ao3"
+    }
+      
+    
+
+    #article_8{
+        display: none;
+    }
+    #article_7{
+        display: none;
+    }
 }
