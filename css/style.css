@@ -531,36 +531,107 @@ li{
 #grid_wrapper_5{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 100px 600px 75px 650px 250px;
+    grid-template-rows: 100px 800px 65px 580px 500px 250px;
     grid-template-areas: 
     "he na"
     "s10 s10"
     "s11 s11"
     "s12 s13"
+    "s14 s14"
     "fo fo";
 }
 
 #section_10{
     grid-area: s10;
-    background-color: blueviolet;
+    border: 4px solid white;
+    background-image: url(/img/Boka_bord_s10.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: grayscale(60%);
 }
 #section_11{
     grid-area: s11;
+
     background-color: rgb(48, 46, 46);
 }
 #section_12{
     grid-area: s12;
-    background-color: cadetblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(48, 46, 46);
 }
 #section_13{
     grid-area: s13;
-    background-color: burlywood;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(48, 46, 46);
+}
+#section_14{
+    grid-area: s14;
+    background-image: url(/img/Boka_bord_s14.png);
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    border: 4px solid white;
+}
+
+#article_12{
+    flex-direction: column;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    width: 100%;
+    height: 90%;
+}
+#article_13{
+    background-image: url(/img/Boka_bord_s13.png);
+    border: 4px solid white;
+    background-size: contain;
+    margin: 10px;
+    width: 100%;
+    height: 55%;
+}
+#article_14{
+    border: 3px solid white;
+    background-color: rgba(71, 70, 53, 0.5);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 100px;
+}
+#article_15{
+    border: 3px solid white;
+    background-color: rgba(71, 70, 53, 0.75);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    height: 100px;
+}
+
+.boka_bord_a{
+    text-decoration: none;
+    color: white;
+}
+.boka_bord_a2{
+    text-decoration: none;
+    color: white;
 }
 
 @media screen and (max-width: 600px){
-    *{
-        overflow-x: hidden;
-    }
+ 
 
 
     #grid_wrapper{
@@ -745,5 +816,18 @@ li{
     }
     #article_7{
         display: none;
+    }
+
+    #grid_wrapper_5{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 100px 80vh 5vh 70vh 40vh 50vh 30vh;
+        grid-template-areas: 
+        "he na"
+        "s10 s10"
+        "s11 s11"
+        "s12 s12"
+        "s13 s13"
+        "s14 s14"
+        "fo fo";
     }
 }
